@@ -11,7 +11,7 @@ class SystemsController < ApplicationController
   end
 
   def cef3
-    if params[:operation] == "centerfuge" && session[:gates] == 1
+    if params[:operation] == "centerfuge" && session[:gates] >= 1
       session[:gates] = 2
     else
       redirect_to root_path 
@@ -22,7 +22,7 @@ class SystemsController < ApplicationController
   end
 
   def c34ew
-    redirect_to root_path unless params[:keyword] == "budapest" && session[:gates] == 2
+    redirect_to root_path unless params[:keyword] == "budapest" && session[:gates] >= 2
   end
 
 end
