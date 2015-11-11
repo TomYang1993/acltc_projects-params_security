@@ -22,7 +22,11 @@ class SystemsController < ApplicationController
   end
 
   def c34ew
-    redirect_to root_path unless params[:keyword] == "budapest" && session[:gates] >= 2
+    if params[:keyword] == "budapest" && session[:gates] >= 2
+      session[:gates] = 3
+    else
+      redirect_to root_path
+    end
   end
 
 end
