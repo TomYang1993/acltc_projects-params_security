@@ -1,4 +1,5 @@
 class SystemsController < ApplicationController
+
   def init
   end
 
