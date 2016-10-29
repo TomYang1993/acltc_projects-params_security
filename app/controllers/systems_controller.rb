@@ -1,5 +1,4 @@
 class SystemsController < ApplicationController
-
   def init
   end
 
@@ -15,7 +14,7 @@ class SystemsController < ApplicationController
     if params[:operation] == "centerfuge" && session[:gates] >= 1
       session[:gates] = 2
     else
-      redirect_to root_path 
+      redirect_to root_path
     end
   end
 
